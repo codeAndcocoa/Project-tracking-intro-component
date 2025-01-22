@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Bootstrap Css V.5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg p-3 w-100 position-relative">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.svg" alt="company logo" />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler bg-transparent shadow-none border-0"
+          data-bs-toggle="offcanvas"
+          data-bs-toggle="collapse"
+          data-bs-target="#projectNav"
+        >
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="hamburger menu icon"
+            class="border-0"
+          />
+        </button>
+        <div class="offcanvas offcanvas-top rounded-2 bg-transparent" data-bs-backdrop="false"  id="projectNav">
+          <div class="offcanvas-body ms-lg-auto ms-0">
+            <ul class="navbar-nav projectLi">
+              <li class="nav-item p-0 pl-g-3 text-center text-lg-start">
+                <a href="#" class="nav-link text-uppercase">Product</a>
+              </li>
+              <li class="nav-item p-0 pl-g-3 text-center text-lg-start  text-center text-lg-start">
+                <a href="#" class="nav-link text-uppercase"> Features</a>
+              </li>
+              <li class="nav-item p-0 pl-g-3 text-center text-lg-start">
+                <a href="#" class="nav-link text-uppercase"> Pricing</a>
+              </li>
+              <li class="nav-item p-0 pl-g-3 text-center text-lg-start">
+                <hr>
+              </li>
+              <li class="nav-item p-0 pl-g-3 text-center text-lg-start">
+                <a href="#" class="nav-link text-uppercase">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="hero">
+      <div class="inner-hero d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
+        <div class="left">
+          <div class="content">
+            <p class="text-uppercase"><span class="rounded-5">New</span>
+              Monograph Dashboard</p>
+              <h1 class="text-uppercase">Powerful insights into your team</h1>
+              <p class="description"> Project planning and time tracking <br> for agile teams</p>
+
+              <div class="d-flex align-items-center align-content-center justify-content-between justify-content-lg-center">
+                <div class="schedule flex-fill">
+                  <button type="button" class="rounded-3 border-0 p-3">Schedule a demo</button>
+                </div>
+                <div class="preview flex-fill">
+                  <p class="text-uppercase mt-3 text-end text-lg-start">to see a preview</p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="./images/illustration-devices.svg" alt="image of dektop and mobile devices" class="">
+        </div>
+      </div>
+    </section>
+    <!--  
+ 
+ 
+  
+
+ 
+
+
+ 
+
+  -->
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Naglaa Raslan</a>.
+      </p>
+    </footer>
+    <!-- Bootstrap javascript v.5.3 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

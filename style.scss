@@ -1,0 +1,253 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
+//Sizes
+$Fsize: 1.125rem;
+
+//Weights
+$Fweight: (
+  "Regular": 400,
+  "Bold": 700,
+);
+
+//Headings, Call-to-actions, Navigation font
+$Fheadings: "Barlow Condensed";
+
+//Body font
+$Fbody: "Barlow";
+
+//Colors
+//?Primary
+$pr-color: hsl(0, 100%, 68%); /* Red */
+
+//?Neutral
+$neu-color1: hsl(230, 29%, 20%); /* Very Dark Blue  */
+$neu-color2: hsl(230, 11%, 40%); /* Dark Grayish Blue */
+$neu-color3: hsl(231, 7%, 65%); /* Grayish Blue:  */
+$neu-color4: hsl(207, 33%, 95%); /* ;Light Grayish Blue  */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+body {
+  font-family: $Fbody;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+//Navigation
+.container-fluid {
+  margin-top: 3.75rem;
+}
+.navbar-brand {
+  margin-left: 10rem;
+}
+.projectLi {
+  margin-right: 10.125rem;
+
+  a {
+    color: $neu-color1;
+    font-family: $Fheadings;
+    font-weight: map-get($map: $Fweight, $key: "Bold");
+    letter-spacing: 1px;
+    &:focus,
+    &:visited,
+    &:hover {
+      color: $neu-color1;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .nav-item:last-child a {
+    color: $neu-color3;
+    &:focus,
+    &:visited,
+    &:hover {
+      color: $neu-color3;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+hr {
+  border: 5px solid $neu-color3;
+  width: 6px;
+  border-radius: 50%;
+  line-height: 2;
+}
+nav::after {
+  content: "";
+  position: absolute;
+  background: $neu-color4;
+  width: 43.75rem;
+  height: 25.25rem;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 100px;
+  z-index: -1;
+}
+
+//Hero
+#hero{
+  width: 100%;
+  .inner-hero{
+    margin-top: 7.875rem;
+    overflow: hidden;
+  }
+}
+//Left side of hero
+.content{
+  margin-left: 6.875rem;
+  margin-right: 6.188rem;
+  h1{
+    color: $neu-color1;
+    font-family: $Fheadings;
+    font-weight: map-get($map: $Fweight, $key:'Bold');
+    font-size: 4rem;
+    margin-top: 2.5rem;
+  }
+  p{
+    color: $neu-color3;
+    font-family: $Fbody;
+letter-spacing: 2px;
+
+margin-bottom: 1.5rem;
+span{
+  background-color: $neu-color1;
+  color: $neu-color4;
+  font-family: $Fheadings;
+    font-weight: map-get($map: $Fweight, $key:'Bold');
+  letter-spacing: 0;
+  padding:0.2rem 0.5rem;
+}
+  }
+  .description{
+    color: $neu-color2;
+    font-family: $Fbody;
+    font-weight: map-get($map: $Fweight, $key:'Regular');
+    margin-bottom: 4.125rem;
+  }
+}
+.schedule{
+  button{
+    width: 11.375rem;
+    color: $neu-color4;
+    background-color: $pr-color;
+    &:hover{
+      background-color: hsl(0, 100%, 68%,0.8);
+    }
+  }
+}
+.preview p{
+  color: $neu-color3;
+  font-family: $Fbody;
+  font-weight: map-get($map: $Fweight, $key:'Regular');
+  letter-spacing: 5px;
+  font-size: $Fsize;
+
+}
+//Right side of hero
+.right{
+  img{
+     margin-right: -16.125rem; 
+  }
+}
+//Media Queries
+
+@media screen and (width <=992px) {
+}
+
+@media screen and (width <=768px) {
+  #projectNav {
+    margin-top: 10rem;
+  }
+  .offcanvas-body {
+    background-color: #fff;
+    overflow: hidden;
+    height: 15.375rem;
+border-radius: 30px;
+-webkit-box-shadow: 10px 10px 21px 3px rgba(0,0,0,0.09);
+-moz-box-shadow: 10px 10px 21px 3px rgba(0,0,0,0.09);
+box-shadow: 10px 10px 21px 3px rgba(0,0,0,0.09);
+  }
+  nav::after {
+    width: 11.563rem;
+    height: 26.313rem;
+  }
+  .container-fluid {
+    margin-top: 1.938rem;
+  }
+  .navbar-brand {
+    margin-left: 1.625rem;
+  }
+  .projectLi {
+    margin-right: 1.625rem;
+   
+  }
+  hr {
+    width: 90%;
+    margin: 1.625rem auto 1.438rem;
+    border-radius: 0;
+    border-width: 1.2px;
+  }
+  #hero{
+   
+    .inner-hero{
+      margin-top: 3.75rem;
+      
+    }
+  }
+  .content{
+    margin: 3rem;
+    h1{
+      font-size: 5rem;
+    }
+}
+}
+@media screen and (width <= 600px) {
+  #projectNav {
+    width: 90%;
+    margin: 7rem auto;
+  }
+  
+  .projectLi{
+    margin-right: auto;
+     
+  }
+  .schedule{
+    button{
+      width: 9.5rem;
+    }
+  }
+  .content{
+    margin: 2rem 1rem;
+    h1{
+      font-size: 2.5rem;
+    }
+}
+.right{
+  img{
+    width: 35rem;
+    margin-right: -10.125rem; 
+
+  }
+}
+
+.preview p{
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+
+}
+
+@media screen and (width >= 1920px) {
+}
