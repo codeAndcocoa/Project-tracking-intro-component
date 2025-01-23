@@ -162,9 +162,32 @@ span{
   }
 }
 //Media Queries
-
-@media screen and (width <=992px) {
+@media screen  and (1280px <= width <= 1300px){
+  .content{
+    .d-flex{
+     
+      width: 28rem;
+    }
+  }
 }
+@media screen and (width <=1024px){
+  .content{
+    margin-left: 3.875rem;
+    margin-right: 2.188rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    button{
+      font-size: 1.2rem;
+    }
+  }
+  .right{
+    img{
+       margin-right: -15.125rem; 
+       width: 72rem;
+    }
+}}
+
 
 @media screen and (width <=768px) {
   #projectNav {
@@ -250,4 +273,19 @@ box-shadow: 10px 10px 21px 3px rgba(0,0,0,0.09);
 }
 
 @media screen and (width >= 1920px) {
+  .content{
+    font-size: 1.5rem;
+    .d-flex{
+      
+      width: 30rem;
+      button{
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .right{
+    img{
+      width: 80rem;
+    }
+  }
 }
